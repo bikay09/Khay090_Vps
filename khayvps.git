@@ -1,0 +1,2669 @@
+x9ok = 1
+function x9on()
+  while (true) do
+   if gg.isVisible(true) then 
+   x9A= 1
+  gg = gg or {}
+  gg.pauseGame = gg.pauseGame or function() end
+gg.clearResults()
+gg.setVisible(false) 
+   end
+x9B = 1
+function x9B()
+    gg.processPause()
+    local target = gg.getTargetInfo()
+    local packageName = target["packageName"]
+    local appName = target["label"]
+    menu = gg.choice({
+        "〘 ☠️ 〙『 Http Custom』\n",
+        "〘 ☠️ 〙『 Ha Tunnel Plus 』\n",
+		"〘☠️ 〙『 SockSip 』\n",
+        "〘 ☠️ 〙『 NetMod Vpn 』\n",
+        "〘☠️ 〙『 Aplicaciones 』\n",
+		"〘 ☠️ 〙『 Tls Tunnel 』\n",
+		"〘 ☠️〙『 NapsternetV 』\n",
+		"〘 ☠️ 〙『 Dark Tunnel 』\n",
+	    "〘 ☠️ 〙『 eV2ray 』\n",
+        "〘 ❌ 〙『 Salir 』"
+    }, nil, string.format("%s - %s\nVercion de lua 2.3\nFecha %s\nHora %s\n\nPro Sniffer = \n t.me/Gretongers_Premium\n\n", appName, packageName, os.date("%d/%m/%Y"), os.date("%H:%M:%S")))
+    if menu == nil then x9P() end
+    if menu == 1 then HTTPCustom() end
+    if menu == 2 then hat() end
+	if menu == 3 then sip() end   
+    if menu == 4 then nm() end
+    if menu == 5 then json() end
+    if menu == 6 then TLSTunnel() end
+    if menu == 7 then NapsternetV() end
+    if menu == 8 then DarkTunnel() end
+	if menu == 9 then eV2ray() end
+    if menu == 10 then EXIT() end
+    x9A = -1
+    gg.processResume()
+end
+
+function HTTPCustom()
+  limit = false
+function rwmem(Address, SizeOrBuffer)
+    assert(Address ~= nil, "[rwmem]: error, provided address is nil.")
+    _rw = {}
+    if type(SizeOrBuffer) == "number" then
+        _ = ""
+        for _ = 1, SizeOrBuffer do _rw[_] = { address = (Address - 1) + _, flags = gg.TYPE_BYTE } end
+        for v, __ in ipairs(gg.getValues(_rw)) do
+            if __.value == 00 and limit == true then
+                return _
+            end
+            _ = _ .. string.format("%02X", __.value & 0xFF)
+        end
+        return _
+    end
+    Byte = {}
+    SizeOrBuffer:gsub("..", function(x)
+        Byte[#Byte + 1] = x
+        _rw[#Byte] = { address = (Address - 1) + #Byte, flags = gg.TYPE_BYTE, value = x .. "h" }
+    end)
+    gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+    return (hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end))
+end
+
+function hexencode(str)
+    return (str:gsub(".", function(char) return string.format("%2x", char:byte()) end))
+end
+
+function Dec2Hex(nValue)
+    nHexVal = string.format("%X", nValue)
+    sHexVal = nHexVal .. ""
+    return sHexVal
+end
+
+function ToInteger(number)
+    return math.floor(tonumber(number) or error("Could not cast '" .. tostring(number) .. "' to number.'"))
+end
+
+function save(data)
+--ProgressBar = "║░░░░░░░░░░░░░░░║";for x = 1,15,1 do gg.sleep(40) ---ProgressBar = ProgressBar:gsub("░","▓",1);gg.toast(ProgressBar) end
+    io.open(gg.EXT_STORAGE .. "/🔓the_clay.json", "w"):write(hexdecode(data))
+end
+
+gg.setRanges(gg.REGION_JAVA_HEAP)
+---gg.makeRequest("https://raw.githubusercontent.com/EstebanZxx/Forbidden/main/KEY-ACCESS")
+gg.setVisible(false)
+--gg.setVisible(true)
+gg.searchNumber(":[lf]", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method2 = true
+end
+
+if hc_method2 then 
+gg.searchNumber(":[crlf]", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method3 = true
+end
+end
+if hc_method3 then 
+gg.searchNumber(":inbounds", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method4 = true
+end
+end
+if hc_method4 then 
+gg.searchNumber(":80@", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method5 = true
+end
+end
+if hc_method5 then 
+gg.searchNumber(":# Config for OpenVPN 2.x", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method6 = true
+end
+end
+if hc_method6 then 
+gg.searchNumber(":444@", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method7 = true
+end
+end
+if hc_method7 then 
+gg.searchNumber(":443@", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method8 = true
+end
+end
+if hc_method8 then 
+gg.searchNumber(':["ey', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method9 = true
+end
+end
+if hc_method9 then 
+gg.searchNumber(':FRONTED-', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+local r = gg.getResults(1)
+if #r < 1 then
+    
+    hc_method10 = true
+end
+end
+if hc_method10 then
+    gg.alert("No matching keywords!")
+    os.exit()
+end
+
+local r = gg.getResults(100)
+if limit == false then
+    r[1].address = r[1].address - 0x200
+end
+
+readedMem = rwmem(r[1].address, 19000)
+save(readedMem)
+gg.clearResults()
+
+local file = io.open("/sdcard/🔓the_clay.json", 'rb')
+local content = file:read(20000)
+file:close()
+local sshfile = io.open("/sdcard/🔓the_clay.json", 'rb')
+local sshcontent = sshfile:read(1000)
+sshfile:close()
+
+function obterEntradaSSH()
+  local texto = gg.prompt({"Cole ssh criptografado: "}, nil, {"text"})
+  
+  if texto == nil then
+    os.exit()
+  end
+  
+  return texto[1]
+end
+
+function salvarTextoEmArquivo(texto, caminhoArquivo)
+  if texto == nil or texto == "" then
+    return nil, "Texto inválido"
+  end
+  
+  if caminhoArquivo == nil or caminhoArquivo == "" then
+    return nil, "Caminho de arquivo inválido"
+  end
+  
+  local arquivo = io.open(caminhoArquivo, "w")
+  if arquivo == nil then
+    return nil, "Não foi possível abrir o arquivo"
+  end
+  
+  arquivo:write(texto)
+  arquivo:close()
+  
+  return true
+end
+
+function lerTextoDeArquivo(caminhoArquivo)
+  if caminhoArquivo == nil or caminhoArquivo == "" then
+    return nil, "Caminho de arquivo inválido"
+  end
+  
+  local arquivo = io.open(caminhoArquivo, "r")
+  if arquivo == nil then
+    return nil, "Não foi possível abrir o arquivo"
+  end
+  
+  local conteudo = arquivo:read("*all")
+  arquivo:close()
+  
+  if conteudo == nil then
+    return nil, "Não foi possível ler o conteúdo do arquivo"
+  end
+  
+  return conteudo
+end
+
+local hcRegex = {}
+hcRegex["sshEnc"] = "([%w.-]-):(%d+)@([%d-.]+):([%d-.]+)"
+hcRegex["sshNormal"] = "([%w.-]-):(%d+)@(%w+):(%w+)"
+
+function save(val1, val2, val11, val22, val3, car)
+    local outputFileName = "/sdcard/🔓the_clay.json"
+
+    -- Abre o arquivo no modo de escrita no diretório do script
+    local outputFile = io.open(outputFileName, "a")
+
+    if outputFile then
+        -- Construir a string com os valores a serem salvos
+        local data = string.format("%s, %s, %s, %s, %s, %s\n", val1, val2, val11, val22, val3, car)
+        outputFile:write(data)
+        print("")
+        outputFile:close()
+    else
+        print("Falha ao abrir o arquivo de saída")
+    end
+end
+
+function bitwiseAntigo(val1, val2)
+  return string.char((tonumber(val1) // (2 ^ tonumber(val2))) % 256)
+end
+
+function extract(data, iv)
+  local new_data = ""
+  for val1, val2 in string.gmatch(data, "(-?%d+)%.(-?%d+)") do
+    local val11 = tonumber(val1) - iv
+    local val22 = tonumber(val2) - iv
+    local val3 = ((val11 // (2 ^ val22)) % 256)
+    local car = string.char(val3)
+    -- Linhas de depuração
+     --print(val1, val2, val11, 2 ^ val22, val3, car)
+     --save(val1, val2, val11, val22, val3, car)
+     --save(val1, val2, val1, val2, val3, car)
+    new_data = new_data .. car
+  end
+  if verificaString(new_data) then
+    return new_data
+  else
+    new_data = ""
+    for val1, val2 in string.gmatch(data, "(-?%d+)%.(-?%d+)") do
+      car = bitwiseAntigo(val1, val2)
+      new_data = new_data .. car
+    end
+    return new_data
+  end
+end
+
+function verificaString(str)
+  for i=1, #str do
+    local char = str:sub(i,i)
+    local ascii = string.byte(char)
+    if ascii < 0 or ascii > 255 then
+      return false
+    end
+  end
+  return true
+end
+
+function calculaIv(user, senha)
+  if type(user) ~= "string" or type(senha) ~= "string" then
+    return nil, "Usuário e senha devem ser strings"
+  end
+  
+  local countU = 0
+  local countP = 0
+  for match in user:gmatch("(-?%d+)%.(-?%d+)") do
+    countU = countU + 1
+  end
+  for match in senha:gmatch("(-?%d+)%.(-?%d+)") do
+    countP = countP + 1
+  end   
+  
+  return countU, countP
+end
+
+function dec_user_pass(user, userIv, pasw, passIv)
+    return extract(user, userIv), extract(pasw, passIv)
+end
+
+local function exibirEInserir(arquivoSaida, label, texto)
+   
+    local sucesso, erro = arquivoSaida:write(label .. ": " .. texto .. "\n\n")
+
+    if not sucesso then
+        print("Erro ao escrever no arquivo de saída: " .. erro)
+    end
+end
+
+function processarSSHx()
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json"
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json"
+
+    local entradaSSH = lerTextoDeArquivo(caminhoArquivoEntrada)
+
+    if not entradaSSH then
+        print("Erro ao ler o arquivo de entrada")
+        return
+    end
+
+    local sshHost, sshPort, sshU, sshP = string.match(entradaSSH, hcRegex["sshEnc"])
+
+    if not sshHost or not sshPort or not sshU or not sshP then
+        print("")
+        return
+    end
+
+    local userIv, senhaIv = calculaIv(sshU, sshP)
+
+    if not userIv or not senhaIv then
+        print("Erro ao calcular as IVs")
+        return
+    end
+
+    local sshUser, sshSenha = dec_user_pass(sshU, userIv, sshP, senhaIv)
+
+    if not sshUser or not sshSenha then
+        result = "No Encrypt"
+        return
+    end
+
+    -- Criar ou abrir o arquivo de saída
+    local arquivoSaida = io.open(caminhoArquivoSaida, "a")
+
+    if not arquivoSaida then
+        result = "No Encrypt"
+        return
+    end
+
+    -- Concatenar os resultados
+local saida = "\nHost: \"" .. (sshHost or "") .. "\""
+saida = saida .. "\nPort: \"" .. (sshPort or "") .. "\""
+saida = saida .. "\nUsername: \"" .. (sshUser or "") .. "\""
+saida = saida .. "\nPassword: \"" .. (sshSenha or "") .. "\""
+host = (sshHost)
+port = (sshPort)
+hostt = (sshUser)
+pas = (sshSenha)
+result = (sshHost ..":".. sshPort .."@".. sshUser ..":".. sshSenha)
+    -- Exibir e salvar os resultados
+    exibirEInserir(arquivoSaida, " ", saida)
+    
+-- Fechar o arquivo de saída
+    arquivoSaida:close()
+end    
+
+processarSSHx()
+
+local PAYLOADD = string.match(sshcontent, "[a-zA-Z]+[\x20]+.*[\x5bcrlf\x5d+].+")  or "***."
+local user = {}
+for i = 1, #PAYLOADD - 1 do
+table.insert(user, PAYLOADD:sub(i,i))
+end
+PAYLOADD = table.concat(user, "")
+
+local SSH = string.match(sshcontent, "[0-9a-zA-Zx\x2e\x2d]+:[%d]+@[%w\x2e\x2d]+:[%w]+.")
+
+function payloadx9()
+function payload()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                teste = (texto) or false
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "\n")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function payloadx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+        local keywordsPayload = {"PATCH%/", "crlf%]", "Upgrade:", "GET / HTTP%/", "User-Agent", "protocol%]", "lf%]Host:", "lf%host:", "%[host", "host:", "Host:", "%[app_", "%[r", "\\r", "\\n", "\\r\\n", "%[Protocol%]", "lf%]"}
+        local labelPayload = "Payload"
+
+        -- Testa todas as palavras-chave para o Payload
+        local encontrouPayload = tentarEncontrarPalavrasChave(conteudo, keywordsPayload, labelPayload)
+
+        if encontrouPayload then
+            print("")
+        else
+    ---        teste = "false"
+        end
+    end
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    payloadx()
+end
+
+payload()
+end
+
+payloadx9()
+
+function ovpnx9()
+function ovpn()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                testedd = (texto) or false
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function ovpnx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+   local keywordsOpenVPN = {"auth%-user%-pass", "dev tun", "%<ca%>", "%<%/ca%>"}
+    local labelOpenVPN = "\nOpenVPN"
+
+    -- Testa todas as palavras-chave para o OpenVPN
+    local encontrouOpenVPN = tentarEncontrarPalavrasChave(conteudo, keywordsOpenVPN, labelOpenVPN)
+
+    if encontrouOpenVPN then
+        print("")
+    else
+---        testedd = "false"
+    end
+end
+
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    ovpnx()
+end
+
+ovpn()
+end
+
+ovpnx9()
+
+function v2rayx9()
+function v2ray()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                testeddd = (texto)
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function v2rayx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+   local keywordsV2ray = {"inbounds", "outbounds", "vless:\\/\\/", "vmess:\\/\\/", "trojan:\\/\\/"}
+    local labelV2ray = "[#] 𝐕𝟐𝐑𝐚𝐲"
+
+    -- Testa todas as palavras-chave para o OpenVPN
+    local encontrouV2ray = tentarEncontrarPalavrasChave(conteudo, keywordsV2ray, labelV2ray)
+
+    if encontrouV2ray then
+        print("")
+    else
+ ---       testeddd= "false"
+    end
+end
+
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    v2rayx()
+end
+
+v2ray()
+end
+
+v2rayx9()
+
+function pythonx9()
+function python()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                testedddd = (texto)
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function pythonx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+   local keywordsPython = {'"ey', 'FRONTED-'}
+    local labelPython = ""
+
+    -- Testa todas as palavras-chave para o OpenVPN
+    local encontrouPython = tentarEncontrarPalavrasChave(conteudo, keywordsPython, labelPython)
+
+    if encontrouPython then
+        print("")
+    else
+  --     testedddd = "false"
+    end
+end
+
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    pythonx()
+end
+
+python()
+end
+
+pythonx9()
+
+local proxy = string.match(content, "%w+.[%w\x2e]+[\x3a][%d]+") 
+
+local life = string.match(content, "%d%d%d%d[\45]%d%d[\45]%d%d[\32]%d%d[\58]%d%d") or "lifeTime"
+
+local sni = string.match(content, "[%w%.-]+:%d%d+[^😈]-\0([%w%.-]-%.[%w.-]-)\0") 
+
+local ns  = string.match(content, "false") or "false"
+
+local pubkey = string.match(content, "[a-f0-9]+[32,64,50,66,61,6c,73,65][%w.-]+.") 
+
+local psiphon = string.match(content, "[\x5b]\x22.*]") or false
+
+local versi = string.match(content, "645") or "645"
+
+local xX = os.date("%d/%m/%Y %I:%M:%S")
+
+--local xX = os.date("%I:%M %p")
+
+function keyx9()
+function key()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                pub = (texto) 
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "\n")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function keyx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+        local keywordsPayload = {"b22", "bc2c"}
+        local labelPayload = "Payload"
+
+        -- Testa todas as palavras-chave para o Payload
+        local encontrouPayload = tentarEncontrarPalavrasChave(conteudo, keywordsPayload, labelPayload)
+
+        if encontrouPayload then
+            print("")
+        else
+     ---       pub = "false"
+        end
+    end
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    keyx()
+end
+
+key()
+end
+
+keyx9()
+
+function slowdnsx9()
+function slowdns()
+    -- Função para remover bytes nulos do início e do final do texto
+    local function removeNullBytes(texto)
+        return texto:gsub("^[%z]+", ""):gsub("[%z]+$", "")
+    end
+
+    -- Função para tentar encontrar palavras-chave e salvar informações
+    local function tentarEncontrarPalavrasChave(conteudo, palavrasChave, label)
+        conteudo = removeNullBytes(conteudo)
+
+        for _, palavraChave in ipairs(palavrasChave) do
+            local inicio, fim = conteudo:find(palavraChave)
+
+            if inicio then
+                local inicioJSON = inicio
+                local fimJSON = fim
+
+                -- Percorre para trás até encontrar o início real do JSON
+                while inicioJSON > 1 and conteudo:sub(inicioJSON - 1, inicioJSON - 1) ~= "\0" do
+                    inicioJSON = inicioJSON - 1
+                end
+
+                -- Percorre para frente até encontrar o final real do JSON
+                while fimJSON < #conteudo and conteudo:sub(fimJSON + 1, fimJSON + 1) ~= "\0" do
+                    fimJSON = fimJSON + 1
+                end
+
+                local texto = conteudo:sub(inicioJSON, fimJSON)
+
+                -- Exibe e salva no arquivo
+                local pay = texto
+                name = (texto)
+                local arquivoSaida = io.open("/sdcard/🔓the_clay.json", "a")
+
+                if not arquivoSaida then
+                    print("Falha ao abrir o arquivo de saída.")
+                    return
+                end
+
+                arquivoSaida:write(label .. ": " .. texto .. "\n")
+                arquivoSaida:close()
+
+                return true
+            end
+        end
+
+        return false
+    end
+
+    -- Função para decodificar a payload e salvar no arquivo /sdcard/🔓the_clay.json
+    local function slowdnsx()
+        local arquivo = io.open("/sdcard/🔓the_clay.json", "rb")
+
+        if not arquivo then
+            print("Falha ao abrir o arquivo de entrada.")
+            return
+        end
+
+        local conteudo = arquivo:read("*a")
+        arquivo:close()
+
+        local keywordsSlowdns = {"ns", "n%s-"}
+        local labelSlowdns = "Payload"
+
+        -- Testa todas as palavras-chave para o Payload
+        local encontrouSlowdns = tentarEncontrarPalavrasChave(conteudo, keywordsSlowdns, labelSlowdns)
+
+        if encontrouSlowdns then
+            print("")
+        else
+        --    name = "false"
+        end
+    end
+
+    local caminhoArquivoEntrada = "/sdcard/🔓the_clay.json" -- caminho do arquivo de entrada
+    local caminhoArquivoSaida = "/sdcard/🔓the_clay.json" -- caminho do arquivo de saída
+
+    slowdnsx()
+end
+
+slowdns()
+end
+
+slowdnsx9()
+
+local server = string.match(content, "[%w\x2e\x2d]+[\x2e]+[%w]+")
+local dns = string.match(content, "[%w\x2e\x2d]+[\x2e]+[%w]+")
+
+local result = {
+	[1] = {
+    ['NAME'] = " @Khay_090  \n",
+    ['DATA'] = xX
+    },
+    [2] = {
+    ['NAME'] = "\nConfiguration version data: ",
+    ['DATA'] = versi
+    },
+    [3] = {
+    ['NAME'] = "\nHost: ",
+    ['DATA'] = host
+    },
+    [4] = {
+    ['NAME'] = "Port: ",
+    ['DATA'] = port
+    },
+    [5] = {
+    ['NAME'] = "User: ",
+    ['DATA'] = hostt
+    },
+    [6] = {
+    ['NAME'] = "Password: ",
+    ['DATA'] = pas
+    },
+	[7] = {
+    ['NAME'] = "\nPayload: ",
+    ['DATA'] = teste
+    },
+    [8] = {
+    ['NAME'] = "\nProxy: ",
+    ['DATA'] = proxy
+    },
+    [9] = {
+    ['NAME'] = "\nSSL: ",
+    ['DATA'] = sni
+    },
+    [10] = {
+    ['NAME'] = "\nV2ray: ",
+    ['DATA'] = testeddd
+    },
+    [11] = {
+    ['NAME'] = "\nPsiphon: ",
+    ['DATA'] = testedddd
+    },
+    [12] = {
+    ['NAME'] = "\nOpenVPN: ",
+    ['DATA'] = testedd
+    },
+ 
+  }
+  
+      local message = ""
+      for index, keys in ipairs(result) do
+        if result[index] and result[index]['DATA'] then 
+          local names = result[index]['NAME']
+          local value = result[index]['DATA']
+  
+          message = message..""..names..""..value.."\n"
+           end
+            end
+         
+            message = message..""
+        local alert = gg.alert(message, "save", "cancel")
+        if alert == 1 then
+        gg.copyText(message, false)
+   --     gg.toast("Copied To Clipboard")
+        elseif alert == 2 then
+        end
+      io.open('/sdcard/hc.txt', 'w'):write(message)
+    save(hexdecode(readedMem))
+  gg.clearResults()
+  
+  
+gg.clearResults()
+print("SNIFF BY @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(HTTPCustom))
+prima()
+end
+  
+  function hat()
+function rwmem(Address, SizeOrBuffer)
+  assert(Address ~= nil, "[rwmem]: error, endereço fornecido é nulo.")
+  
+  _rw = {}
+
+  if type(SizeOrBuffer) == "number" then
+    _ = ""
+    for SRD1_5_ = 1, SizeOrBuffer do
+      _rw[SRD1_5_] = {
+        address = Address - 1 + SRD1_5_,
+        flags = gg.TYPE_BYTE
+      }
+    end
+
+    for SRD1_5_, SRD1_6_ in ipairs(gg.getValues(_rw)) do
+      if SRD1_6_.value == 0 and limit == true then
+        return _
+      end
+      _ = _ .. string.format("%02X", SRD1_6_.value & 255)
+    end
+
+    return _
+  end
+
+  Byte = {}
+  SizeOrBuffer:gsub("..", function(x)
+    Byte[#Byte + 1] = x
+    _rw[#Byte] = {
+      address = Address - 1 + #Byte,
+      flags = gg.TYPE_BYTE,
+      value = x .. "h"
+    }
+  end)
+
+  gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+  return (hex:gsub("%x%x", function(digits)
+    return string.char(tonumber(digits, 16))
+  end))
+end
+
+function hexencode(str)
+  return (str:gsub(".", function(char)
+    return string.format("%2x", char:byte())
+  end))
+end
+
+function Dec2Hex(nValue)
+  nHexVal = string.format("%X", nValue)
+  sHexVal = nHexVal .. ""
+  return sHexVal
+end
+
+function ToInteger(number)
+  return math.floor(tonumber(number) or error("Não foi possível transmitir '" .. tostring(number) .. "' enumerar.'"))
+end
+
+function save(data)
+  io.open("results.txt", "w"):write(data)
+end
+
+limit = false
+gg.clearResults()
+gg.setVisible(true)
+gg.setRanges(gg.REGION_JAVA_HEAP | gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS | gg.REGION_JAVA | gg.REGION_C_HEAP | gg.REGION_C_DATA)
+
+local function searchAndSave(searchText)
+  gg.searchNumber(searchText, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local results = gg.getResults(1)
+
+  if #results > 0 then
+    if not limit then
+      results[1].address = results[1].address - 4500
+    end
+    local readedMem = rwmem(results[1].address, 6000)
+    save(hexdecode(readedMem))
+    return true
+  end
+
+  return false
+end
+
+local tests = {
+  'h 4C 6F 2F 31 79 47 51 55 66 49 39 48 47 34 4E 55 4C',
+  'h 4C 6F 2F 31 79 47 51 55 66 49 39 48 47 34 4E 55 4C',
+  'h 5C 22 73 65 72 76 65 72 5F 68 6F 73 74 5C 22 3A 5C 22',
+  'h 5C 22 73 65 72 76 65 72 5F 68 6F 73 74 5C 22 3A 5C 22',
+}
+
+local addressFound = false
+
+for _, searchText in ipairs(tests) do
+  if searchAndSave(searchText) then
+    addressFound = true
+    break
+  end
+end
+
+if not addressFound then
+  gg.alert("Decryption failed. Re-import the file and run the script.")
+  gg.toast("𝐅𝐚𝐢𝐥𝐞𝐝")
+  os.exit()
+end
+
+local f = io.open("results.txt", "r")
+local content = f:read("*all")
+f:close()
+
+content = string.gsub(content, '\\"\\"' , '""')
+content = string.gsub(content, '\\":\\"' , '":"')
+content = string.gsub(content, '\\":' , '":')
+content = string.gsub(content, '\\"' , '"')
+content = string.gsub(content, '\\\\"' , '"')
+content = string.gsub(content, '\\\\\\/' , '/')
+content = string.gsub(content, '\\\\\\/' , '\\\\/')
+content = string.gsub(content, '\\/' , '/')
+content = string.gsub(content, '{"user_id":"', '{\n    "user_id": "')
+content = string.gsub(content, '","access_code":"', '",\n    "access_code": "')
+content = string.gsub(content, '","app_name":"', '",\n    "app_name": "')
+content = string.gsub(content, '","version_alias":"', '",\n    "version_alias": "')
+content = string.gsub(content, '","app_version_name":"', '",\n    "app_version_name": "')
+content = string.gsub(content, '","app_version_code":', '",\n    "app_version_code": "')
+content = string.gsub(content, ',"base_tunnel":', '",\n    "base_tunnel": "')
+content = string.gsub(content, ',"connection_profile":"', '",\n    "connection_profile": ')
+content = string.gsub(content, '{"connection_mode":"', '{\n        "connection_mode": "')
+content = string.gsub(content, '{"connection_mode":', '{\n        "connection_mode": "')
+content = string.gsub(content, '","server_port":', '",\n        "server_port": "')
+content = string.gsub(content, ',"custom_payload":"', '",\n        "custom_payload": "')
+content = string.gsub(content, '","custom_host":"', '",\n        "custom_host": "')
+content = string.gsub(content, '","custom_sni":"', '",\n        "custom_sni": "')
+content = string.gsub(content, '","custom_resolver":"', '",\n        "custom_resolver": "')
+content = string.gsub(content, '","use_realm_host":', '",\n        "use_realm_host": "')
+content = string.gsub(content, ',"preserve_sni":', '",\n        "preserve_sni": "')
+content = string.gsub(content, ',"use_tcp_payload":', '",\n        "use_tcp_payload": "')
+content = string.gsub(content, ',"realm_host":"', '",\n        "realm_host": "')
+content = string.gsub(content, '","override_primary_host":', '",\n        "override_primary_host": ')
+content = string.gsub(content, ',"primary_host":"', '",\n        "primary_host": "')
+content = string.gsub(content, '","dns_primary_host":"', '",\n        "dns_primary_host": "')
+content = string.gsub(content, '","primary_node":"', '",\n        "primary_node": "')
+content = string.gsub(content, '"",\n    "base_tunnel": "', '",\n        "base_tunnel": "')
+content = string.gsub(content, ',"isv5":', '",\n        "isv5": "')
+content = string.gsub(content, ',"protextras":', '",\n        "protextras": ')
+content = string.gsub(content, '{"anti_sniff":', '{\n            "anti_sniff": "')
+content = string.gsub(content, ',"mobile_data":', '",\n            "mobile_data": "')
+content = string.gsub(content, ',"block_root":', '",\n            "block_root": "')
+content = string.gsub(content, ',"password":', '",\n            "password": "')
+content = string.gsub(content, ',"password_value":"', '",\n            "password_value": "')
+content = string.gsub(content, '","id_lock":', '",\n            "id_lock": "')
+content = string.gsub(content, ',"id_lock_value":"', '",\n            "id_lock_value": "')
+content = string.gsub(content, '","expiry":', '",\n            "expiry": "')
+content = string.gsub(content, ',"expiry_value":', '",\n            "expiry_value": "')
+content = string.gsub(content, '},"server_host":"', '",\n        },\n        "server_host": "')
+content = string.gsub(content, '"}","receive_timer_countdown":"', '"\n    }\n    ",\n    "receive_timer_countdown": "')
+content = string.gsub(content, '"}', '"\n}')
+
+
+local f = io.open("results.txt", "w")
+f:write(content)
+f:close()
+
+local start = "┌───────────────\n│𝐇𝐀 𝐓𝐔𝐍𝐍𝐄𝐋 𝐏𝐋𝐔𝐒 (𝐇𝐀𝐓)\n│𝐆𝐫𝐨𝐮𝐩: t.me/Gretongers_Premium \n├───────────────\n"
+local final = "└───────────────"
+
+local app_version_name = content:match('"app_version_name": "(.-)"')
+local connection_mode = content:match('"connection_mode": "(%d+)"') or content:match('"connection_mode": "(%d+)')
+local server_port = content:match('"server_port": "(%d+)')
+local custom_payload = content:match('"custom_payload": "(.-)"')
+local custom_host = content:match('"custom_host": "([%w%.]+)"')
+local custom_sni = content:match('"custom_sni": "(%S-)"')
+local custom_resolver = content:match('"custom_resolver": "([%d%.]+)"')
+local use_realm_host = content:match('"use_realm_host": "(%w+)')
+local preserve_sni = content:match('"preserve_sni": "(%w+)"')
+local use_tcp_payload = content:match('"use_tcp_payload": "(%w+)"')
+local realm_host = content:match('"realm_host": "([%w%.]+)"')
+local override_primary_host = content:match('"override_primary_host": "(%w+)"')
+local primary_host = content:match('"primary_host": "(%S-)"')
+local dns_primary_host = content:match('"dns_primary_host": "(%S-)"')
+local primary_node = content:match('"primary_node": "(%S-)"')
+local base_tunnel = content:match('"base_tunnel": "(%w+)"')
+local anti_sniff = content:match('"anti_sniff": "(%w+)"')
+local block_root = content:match('"block_root": "(%w+)"')
+local isv5 = content:match('"isv5": "(%w+)"')
+
+local message = start
+
+local function addKey(label, value)
+  if value and value ~= "" then
+    message = message .. "" .. label .. ": " .. value .. "\n"
+  end
+end
+
+addKey("Version App", app_version_name)
+addKey("Connection Mode", connection_mode)
+addKey("Server Port", server_port)
+addKey("Custom Payload", custom_payload)
+addKey("Custom Host", custom_host)
+addKey("Custom SNI", custom_sni)
+addKey("Custom Resolver", custom_resolver)
+addKey("Use Realm Host", use_realm_host)
+addKey("Preserve SNI", preserve_sni)
+addKey("Use TCP Payload", use_tcp_payload)
+addKey("Realm Host", realm_host)
+addKey("Override Primary Host", override_primary_host)
+addKey("Primary Host", primary_host)
+addKey("Dns Primary Host", dns_primary_host)
+addKey("Primary Node", primary_node)
+addKey("Base Tunnel", base_tunnel)
+addKey("Anti Sniff", anti_sniff)
+addKey("Block Root", block_root)
+addKey("Isv5", isv5) 
+
+if message ~= "" then
+  message = message .. final
+  gg.alert(message, 'Copy and exit')
+  gg.copyText(message, false)
+  
+end
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(message)
+f:close()
+gg.setVisible(false)
+
+gg.clearResults()
+print("SNIFF BY @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(HttpInjectorX9))
+prima()
+end
+
+function sip()
+gg.setVisible(true)
+  function rwmem(Address, SizeOrBuffer)
+    assert(Address ~= nil, "[rwmem]: error.")
+    _rw = {}
+    if type(SizeOrBuffer) == "number" then
+      _ = ""
+      do
+        do
+          for SRD1_5_ = 1, SizeOrBuffer do
+            _rw[SRD1_5_] = {
+              address = Address - 1 + SRD1_5_,
+              flags = gg.TYPE_BYTE
+            }
+          end
+        end
+      end
+      do
+        do
+          for SRD1_5_, SRD1_6_ in ipairs(gg.getValues(_rw)) do
+            if SRD1_6_.value == 0 and limit == true then
+              return _
+            end
+            _ = _ .. string.format("%02X", SRD1_6_.value & 255)
+          end
+        end
+      end
+      return _
+    end
+    Byte = {}
+    SizeOrBuffer:gsub("..", function(x)
+      Byte[#Byte + 1] = x
+      _rw[#Byte] = {
+        address = Address - 1 + #Byte,
+        flags = gg.TYPE_BYTE,
+        value = x .. "h"
+      }
+    end
+    )
+    gg.setValues(_rw)
+end
+
+  
+
+  function save(data)
+    io.open(gg.EXT_STORAGE .. "/🔓the_clay.json", "w"):write(data)
+  end
+
+  function hexdecode(hex)
+    return (hex:gsub("%x%x", function(digits)
+      return string.char(tonumber(digits, 16))
+    end
+    ))
+  end
+
+  gg.clearResults()
+  gg.setRanges(gg.REGION_JAVA_HEAP | gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS | gg.REGION_JAVA | gg.REGION_C_HEAP | gg.REGION_PPSSPP | gg.REGION_C_DATA | gg.REGION_C_BSS | gg.REGION_STACK | gg.REGION_ASHMEM | gg.REGION_BAD)
+  gg.setVisible(false)
+  gg.searchNumber("h 6c 69 73 74 65 6e 50 6f 72 74 71 00 7e 00 01 4c 00 06", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local r = gg.getResults(1)
+  if #r < 1 then
+    
+    sip_2 = true
+  end
+  if sip_2 then
+    gg.searchNumber("h6E6577746F6F6C73776F726B732E636F6D2E736F636B7369702E7574696C732E536572536F636B73495068", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_3 = true
+    end
+  end
+  if sip_3 then
+    gg.searchNumber("h 55 70 67 72 61 64 65 3A", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_4 = true
+    end
+  end
+  if sip_4 then
+    gg.searchNumber("h 3A 38 30 40", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_5 = true
+    end
+  end
+  if sip_5 then
+    limit = false
+    gg.searchNumber("h 7B 0A 09 09 22 69 6E 62 6F 75 6E 64", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_6 = true
+    end
+  end
+  if sip_6 then
+    limit = false
+    gg.searchNumber("h 73 70 65 65 64 79 73 73 68 2e", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_7 = true
+    end
+  end
+  if sip_7 then
+    limit = false
+    gg.searchNumber("h 3A 35 33 40", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_8 = true
+    end
+  end
+  if sip_8 then
+    limit = false
+    gg.searchNumber("h 47 45 54 20 77", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_9 = true
+    end
+  end
+  if sip_9 then
+    limit = false
+    gg.searchNumber("h 5b 63 72 6c 66 5d 48 6f 73 74 3a", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_10 = true
+    end
+  end
+  if sip_10 then
+    limit = false
+    gg.searchNumber("h 48 6f 73 74 3a 5b 72 6f 74 61 74 65 3d", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_11 = true
+    end
+  end
+  if sip_11 then
+    limit = false
+    gg.searchNumber("h 3A 34 34 33 40", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+    local r = gg.getResults(1)
+    if #r < 1 then
+      
+      sip_12 = true
+    end
+  end
+  if sip_12 then
+    gg.toast("Sorry Nothing Found!")
+    print("Close Socksip, reopen after 3secs and try again \n\n")
+    os.exit()
+  end
+  local r = gg.getResults(9000)
+  if limit == false then
+    r[1].address = r[1].address - 8192
+  end
+  _G.readedMem = rwmem(r[1].address, 9000)
+  save(hexdecode(readedMem))
+  
+  print("✓ Saved In: /sdcard/🔓the_clay.json")
+  gg.clearResults()
+  
+  
+    -- Don't edit anything unless you understand the code!
+    
+  local file = io.open("/sdcard/🔓the_clay.json", 'rb')
+  local content = file:read(9000)
+  file:close()
+  local sshfile = io.open("/sdcard/🔓the_clay.json", 'rb')
+  local sshcontent = sshfile:read(3400)
+  sshfile:close()
+
+local serverPayload = string.match(sshcontent, "GET%s.*TCP") or string.match(content, "POST%s.*TCP")or string.match(content, "CONNECT%s.*TCP")or string.match(content, "PUT%s.*TCP")or string.match(content, "BMOVE%s.*TCP") or string.match(content, "[A-Z]%sHTTP/.*TCP") or string.match(content, "HTTP/.*TCP") or string.match(content, "HTTP/.*%[lf%]") or string.match(content, "HTTP/.*%[crlf%]") or "___"
+if not string.match(sshcontent, "GET%s.*TCP") or not string.match(sshcontent, "POST%s.*TCP") or not string.match(sshcontent, "CONNECT%s.*TCP") or string.match(sshcontent, "PUT%s.*TCP")then
+local payload = {}
+for i = 1, #serverPayload - 6 do
+table.insert(payload, string.sub(serverPayload, i, i))
+end
+serverPayload = table.concat(payload,"")
+else end
+
+local SSH = string.match(sshcontent, "[%d%.%w.-]+:[%d]+@[%w%.-]+:[%w%.-]+")  or "_"
+local shs = {}
+for i = 1, #SSH - 1 do
+table.insert(shs, SSH:sub(i,i))
+end
+SSH = table.concat(shs, "")
+
+
+local udpserver = string.match(sshcontent, "%d+%.%d+%.%d+%.%d+t") or ""
+udpserver = udpserver:gsub('t', "")
+
+local websocket = string.match(content, "[%a%d]+%.[%w+%a]+%.xyzt  ") or ""
+websocket = websocket:gsub("t  q ~", "")
+
+local sshusern = string.match(content, "@[%w+%.-]+") or false
+
+local udpuser = sshcontent:match('t %c[%w%.-]+-%w+') or string.match(sshcontent, "[%w%.-]+-%w+")  or "_"
+local us = {}
+for i = 1, #udpuser - 1 do
+table.insert(us, udpuser:sub(i,i))
+udpusern = table.concat(us, "")
+udpusern = udpusern:gsub('t%c','')
+udpusern = udpusern:gsub("%c","")
+end
+udpusern = udpusern or ""
+
+local username2 = string.match(sshcontent, "t %w+q")  or "___"
+
+udpass = string.match(sshcontent, "%Ct [%c%s]+%w+t [%c]%d") or sshcontent:match("zt [%c%s]+%w+t [%c]%d") or sshcontent:match("t [%c%s]+%w+t [%c]%d") or "___"
+local sp1 = {}
+for i = 4, #udpass -4 do
+table.insert(sp1, udpass:sub(i,i))
+end
+local udpass = table.concat(sp1,"")
+udpass = udpass:gsub("%c","")
+udpass = udpass:gsub("%s","")
+
+local suser = {}
+sshusername = string.match(sshcontent, "t [%c]+%w+t  q ") or "___"
+for i = 4, #sshusername - 5 do
+table.insert(suser, sshusername:sub(i,i))
+end
+sshusername = table.concat(suser,"")
+local sshusername2 = SSH:match("@([%w%-]+):") or false
+local suser2 = {}
+for i = 2, #sshusername - 1 do
+table.insert(suser2, sshusername2:sub(i,i))
+end
+sshusername2 = table.concat(suser2, "")
+local spass = {}
+sshpassword = string.match(sshcontent, "t [%c]+%w+t") or "___"
+for i = 4, #sshpassword - 1 do
+table.insert(spass, sshpassword:sub(i,i))
+end
+sshpassword = table.concat(spass,"")
+
+local sshproxy = string.match(sshcontent, "[%w%.]+:[%d]+t") or ""
+sshproxy = sshproxy:gsub('t','')
+
+local proxy = string.match(content, "%d+%.%d+%.%d+%.%d+:8080") or content:match('%d+%.%d+%.%d+%.%d+:80') or string.match(content, "%d+%.%d+%.%d+%.%d+:443")  or string.match(content, "%d+%.%d+%.%d+%.%d+:3128")
+
+local nameserver = string.match(content,"n%w+%d?%.fibertunnel.xyzt") or  string.match(content, "nsam%d?[%w.-]+") or string.match(content, "n%w+%d?[%w.-]+") or "_"
+local ns = {}
+for i = 1, #nameserver - 1 do
+table.insert(ns, nameserver:sub(i,i))
+end 
+local nameserver = table.concat(ns,"")
+
+local serverLocation = string.match(content,"Amsterdam EU") or string.match(content,"France EU") or string.match(content,"USA %d")
+
+local serverProtocol = string.match(content, "%u+,%u+,%u+,%u+")
+
+local serverDNS = string.match(content, "%d+%.%d+%.%d+%.%d+:53") or ""
+
+local hostws = string.match(content,"%U%U%d?%.fibertunnel.xyz") or string.match(content, "%A+%.%A+%.xyz") or string.match(content,"br1.fibertunnel.xyz") or string.match(content,"br2.fibertunnel.xyz") or string.match(content,"gr1.fibertunnel.xyz") or string.match(content,"ca1.fibertunnel.xyz") or string.match(content,"uk1.fibertunnel.xyz") or string.match(content,"uk2.fibertunnel.xyz") or string.match(content,"fr1.fibertunnel.xyz") or string.match(content,"fr2.fibertunnel.xyz") or string.match(content,"am1.fibertunnel.xyz")
+
+local pubkey = string.match(content, "@[%d%U]+a") or ""
+
+local pkey = string.match(pubkey, "[%d%a]+") or ""
+
+local notes = content:match("<.*>.*</[%w%p]+>") or content:match("<[%w%p%s]+>.*</[%w%p]+>")
+
+local sni = content:match("[%w]+%.[%w]+%.[%w]+%.[%w]+t") or content:match("[%w]+%.[%w]+%.[%w]+t") or content:match("[%w]+%.[%w]+t") or "_"
+local sn = {}
+for i = 1, #sni - 1 do
+table.insert(sn, sni:sub(i,i))
+end 
+sni = table.concat(sn, "")
+
+local key = content:match("[%w][%w%p%a]+=")
+
+local mode = {"Request/Single Tunnel","Custom SSH","Custom UDP","DNS","Custom Websocket",}
+local active_mode = ""
+if #serverPayload > 10 then
+active_mode = mode[1]
+elseif #udpserver > 7 and #udpusern > 5 or #udpass > 6 then
+active_mode = mode[3]
+elseif #SSH > 7 and sshusername > 3 and sshpassword > 3 then
+active_mode = mode[2]
+elseif #serverDNS > 6 and  #pkey > 10 then
+active_mode = mode[4]
+elseif  #sni > 6 and #serverPayload < 10 and #udpserver < 6 then
+active_mode = mode[5]
+else
+active_mode = "";
+end
+
+local result = {
+	[1] = {
+    ['NAME'] = "t.me/Khay_090",
+    ['DATA'] = active_mode
+  },
+  [2] = {
+    ['NAME'] = "payload",
+    ['DATA'] = serverPayload
+  },
+  [3] = {
+    ['NAME'] = "server_udp",
+    ['DATA'] = udpserver 
+  },
+  [6] = {
+    ['NAME'] = "server",
+    ['DATA'] = SSH
+  },
+  [4] = {
+    ['NAME'] = "username_udp",
+    ['DATA'] = udpusern
+  },
+  [5] = {
+    ['NAME'] = "password_udp",
+    ['DATA'] = udpass
+  },
+    [7] = {
+    ['NAME'] = "username",
+    ['DATA'] = sshusername
+  },
+    [8] = {
+    ['NAME'] = "password",
+    ['DATA'] = sshpassword
+  },
+  [9] = {
+    ['NAME'] = "proxy",
+    ['DATA'] = sshproxy
+  },
+  [10] = {
+    ['NAME'] = "proxy_port",
+    ['DATA'] = proxy
+  },
+  [11] = {
+    ['NAME'] = "host_websocket",
+    ['DATA'] = hostws or websocket
+  },
+  [12] = {
+    ['NAME'] = "location", 
+    ['DATA'] = serverLocation
+  },
+  [13] = {
+    ['NAME'] = "protocol", 
+    ['DATA']= serverProtocol
+  },
+  [14] = {
+    ['NAME'] = "ssl_sni",
+     ['DATA'] = sni
+    },
+  [15] = {
+    ['NAME'] = "server_dn", 
+    ['DATA'] = serverDNS
+  },
+  [16] = {  
+["NAME"] = "name_server",   
+ ["DATA"] = nameserver
+},
+[17] = { 
+["NAME"] = "public_key", 
+['DATA'] = pkey
+},
+ [19] = { 
+["NAME"] = "notes" , 
+['DATA'] = notes
+},
+[18] = { 
+["NAME"] = "server_key" , 
+['DATA'] = key
+},
+ 
+  }
+  
+      local message = "┌─────────────────\n│𝐒𝐎𝐂𝐊𝐒𝐈𝐏 (𝐒𝐈𝐏)\n│𝐆𝐫𝐨𝐮𝐩: t.me/Gretongers_Premium/@Khay_090\n├───────────────\n"
+      for index, keys in ipairs(result) do
+        if result[index] and result[index]['DATA'] then 
+          local names = result[index]['NAME']
+          local value = result[index]['DATA']
+  
+          message = message..names.." : "..value.."\n"
+           end
+            end
+
+            message = message.."└───────────────"
+      gg.alert(message, "COPY TO CLIP")
+      io.open('/sdcard/socksip.txt', 'w'):write(message)
+      gg.copyText(message, false)
+      gg.toast("by The Clay")
+   --   print("Pubkey value: "..result[16]['DATA'])
+    save(hexdecode(readedMem))
+  gg.clearResults()
+
+gg.clearResults()
+print("SNIFF BY @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(HttpInjectorX9))
+prima()
+end
+
+function nm()
+function rwmem(Address, SizeOrBuffer)
+  assert(Address ~= nil, "[rwmem]: error, endereço fornecido é nulo.")
+  
+  _rw = {}
+
+  if type(SizeOrBuffer) == "number" then
+    _ = ""
+    for SRD1_5_ = 1, SizeOrBuffer do
+      _rw[SRD1_5_] = {
+        address = Address - 1 + SRD1_5_,
+        flags = gg.TYPE_BYTE
+      }
+    end
+
+    for SRD1_5_, SRD1_6_ in ipairs(gg.getValues(_rw)) do
+      if SRD1_6_.value == 0 and limit == true then
+        return _
+      end
+      _ = _ .. string.format("%02X", SRD1_6_.value & 255)
+    end
+
+    return _
+  end
+
+  Byte = {}
+  SizeOrBuffer:gsub("..", function(x)
+    Byte[#Byte + 1] = x
+    _rw[#Byte] = {
+      address = Address - 1 + #Byte,
+      flags = gg.TYPE_BYTE,
+      value = x .. "h"
+    }
+  end)
+
+  gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+  return (hex:gsub("%x%x", function(digits)
+    return string.char(tonumber(digits, 16))
+  end))
+end
+
+function hexencode(str)
+  return (str:gsub(".", function(char)
+    return string.format("%2x", char:byte())
+  end))
+end
+
+function Dec2Hex(nValue)
+  nHexVal = string.format("%X", nValue)
+  sHexVal = nHexVal .. ""
+  return sHexVal
+end
+
+function ToInteger(number)
+  return math.floor(tonumber(number) or error("Não foi possível transmitir '" .. tostring(number) .. "' enumerar.'"))
+end
+
+function save(data)
+  io.open("/sdcard/🔓the_clay.json", "w"):write(data)
+end
+
+limit = true
+gg.clearResults()
+gg.setVisible(true)
+gg.setRanges(gg.REGION_JAVA_HEAP | gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS | gg.REGION_JAVA | gg.REGION_C_HEAP | gg.REGION_C_DATA)
+
+local function searchAndSave(searchText)
+  gg.searchNumber(searchText, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local result = gg.getResults(1)
+
+  if #result > 0 then
+    if limit == false then
+      --result[1].address = result[1].address - 3000
+      result[1].address = result[1].address - 8192
+    end
+    --readedMem = rwmem(result[1].address, 4000)
+    readedMem = rwmem(result[1].address, 10000)
+    save(hexdecode(readedMem))
+    return true
+  end
+
+  return false
+end
+
+local tests = {
+  'h 69 6E 62 6F 75 6E 64 73 22 3A',
+  --'h 3A 22 70 61 79 6C 6F 61 64 22 3A',
+  'h 7B 22 69 6E 62 6F 75 6E 64 73 22 3A 5B 7B 22 6C 69 73 74 65 6E 22 3A 22 31 32 37 2E 30 2E 30 2E 31 22 2C',
+  'h 7B 22 69 6E 62 6F 75 6E 64 73 22 3A 5B 7B 22 6C 69 73 74 65 6E 22 3A 22 31 32 37 2E 30 2E 30 2E 31 22',
+  'h 3a 56 65 72 73 69 6f 6e 43 6f 64 65',
+}
+
+local addressFound = false
+
+for i, searchText in ipairs(tests) do
+  if searchAndSave(searchText) then
+    addressFound = true
+    break
+  end
+end
+
+if not addressFound then
+  gg.alert("Decryption failed. Re-import the file and run the script.")
+  
+  
+  os.exit()
+end
+
+local f = io.open("/sdcard/🔓the_clay.json", "r")
+local dark = f:read("*all")
+f:close()
+
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value') ---strings gsubs to modify keys, add key to text and place text conversation in value
+
+dark = string.gsub(dark, "^%s*(.-)%s*$", "%1")
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(dark)
+f:close()
+
+targetInfo = gg.getTargetInfo()
+app = targetInfo.packageName
+local label = gg.getTargetInfo().label or "N/A"
+
+local currentDate = os.date("*t")
+local data = os.date("%d/%m/%Y")
+
+local message = "AppName: " .. label .. "\nPackage: " .. app .. "\n\n`" .. dark .. "`\n\nCurrent date: " .. data .. "\nChannel: t.me/Gretongers_Premium"
+
+gg.alert(message, 'Copy and exit')
+gg.copyText(message, false)
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(message)
+f:close()
+gg.setVisible(false)
+
+gg.clearResults()
+print("SNIFF BY  @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(HttpInjectorX9))
+prima()
+end
+
+function json()
+function rwmem(Address, SizeOrBuffer)
+  assert(Address ~= nil, "[rwmem]: error, endereço fornecido é nulo.")
+  
+  _rw = {}
+
+  if type(SizeOrBuffer) == "number" then
+    _ = ""
+    for SRD1_5_ = 1, SizeOrBuffer do
+      _rw[SRD1_5_] = {
+        address = Address - 1 + SRD1_5_,
+        flags = gg.TYPE_BYTE
+      }
+    end
+
+    for SRD1_5_, SRD1_6_ in ipairs(gg.getValues(_rw)) do
+      if SRD1_6_.value == 0 and limit == true then
+        return _
+      end
+      _ = _ .. string.format("%02X", SRD1_6_.value & 255)
+    end
+
+    return _
+  end
+
+  Byte = {}
+  SizeOrBuffer:gsub("..", function(x)
+    Byte[#Byte + 1] = x
+    _rw[#Byte] = {
+      address = Address - 1 + #Byte,
+      flags = gg.TYPE_BYTE,
+      value = x .. "h"
+    }
+  end)
+
+  gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+  return (hex:gsub("%x%x", function(digits)
+    return string.char(tonumber(digits, 16))
+  end))
+end
+
+function hexencode(str)
+  return (str:gsub(".", function(char)
+    return string.format("%2x", char:byte())
+  end))
+end
+
+function Dec2Hex(nValue)
+  nHexVal = string.format("%X", nValue)
+  sHexVal = nHexVal .. ""
+  return sHexVal
+end
+
+function ToInteger(number)
+  return math.floor(tonumber(number) or error("Não foi possível transmitir '" .. tostring(number) .. "' enumerar.'"))
+end
+
+function save(data)
+  io.open("/sdcard/🔓the_clay.json", "w"):write(data)
+end
+
+limit = true
+gg.clearResults()
+gg.setVisible(true)
+gg.setRanges(gg.REGION_JAVA_HEAP | gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS | gg.REGION_JAVA | gg.REGION_C_HEAP | gg.REGION_C_DATA)
+
+local function searchAndSave(searchText)
+  gg.searchNumber(searchText, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local result = gg.getResults(1)
+
+  if #result > 0 then
+    if limit == false then
+      --result[1].address = result[1].address - 3000
+      result[1].address = result[1].address - 8192
+    end
+    --readedMem = rwmem(result[1].address, 4000)
+    readedMem = rwmem(result[1].address, 10000)
+    save(hexdecode(readedMem))
+    return true
+  end
+
+  return false
+end
+
+local tests = {
+  'h 69 6E 62 6F 75 6E 64 73 22 3A',
+  --'h 3A 22 70 61 79 6C 6F 61 64 22 3A',
+  'h 22 73 65 72 76 65 72',
+  'h 22 55 73 65 72',
+  'h 22 4E 61 6D 65',
+}
+
+local addressFound = false
+
+for i, searchText in ipairs(tests) do
+  if searchAndSave(searchText) then
+    addressFound = true
+    break
+  end
+end
+
+if not addressFound then
+  gg.alert("Decryption failed. Re-import the file and run the script.")
+  
+  
+  os.exit()
+end
+
+local f = io.open("/sdcard/🔓the_clay.json", "r")
+local dark = f:read("*all")
+f:close()
+
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value') ---strings gsubs to modify keys, add key to text and place text conversation in value
+
+dark = string.gsub(dark, "^%s*(.-)%s*$", "%1")
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(dark)
+f:close()
+
+targetInfo = gg.getTargetInfo()
+app = targetInfo.packageName
+local label = gg.getTargetInfo().label or "N/A"
+
+local currentDate = os.date("*t")
+local data = os.date("%d/%m/%Y")
+
+local message = "AppName: " .. label .. "\nPackage: " .. app .. "\n\n`" .. dark .. "`\n\nCurrent date: " .. data .. "\nChannel: t.me/Gretongers_Premium"
+
+gg.alert(message, 'Copy and exit')
+gg.copyText(message, false)
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(message)
+f:close()
+gg.setVisible(false)
+
+gg.clearResults()
+print("SNIFF BY  @Khay090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(nm))
+prima()
+end
+
+function NapsternetV()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_JAVA_HEAP)
+  gg.setVisible(false)
+  gg.processResume()
+  gg.searchNumber("h7b2276657273696f6e696e6722", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local r = gg.getResults(1)
+  if #r < 1 then
+    print("en:\n⚠ No file found in memory.")
+    print("❗ Import the file and try again without closing NapsternetV.\n\n")
+    os.exit()
+  end
+  readedMem = rwmem(r[1].address, 50000)
+  save(hexdecode(readedMem))
+  print("✅ Successfully!\n\nFile: /sdcard/Decode-Npv4.txt")
+  
+  gg.clearResults()
+print("𝐂𝐫𝐞𝐝𝐢𝐭𝐨𝐬 𝐝𝐞 𝐥𝐮𝐚  @Khay090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(Napsternet))
+prima()
+end
+
+function eV2ray()
+  gg.clearResults()
+  gg.setRanges(gg.REGION_JAVA_HEAP)
+  gg.setVisible(false)
+  gg.processResume()
+  gg.searchNumber("h 7B A 9 9 22 69 6E 62 6F 75 6E 64 73 22 3A", gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local r = gg.getResults(1)
+  if #r < 1 then
+    print("en:\n⚠ No file found in memory.")
+    print("❗ Import the file and try again without closing eV2ray.\n\n")
+    os.exit()
+  end
+  readedMem = rwmem(r[1].address, 50000)
+  save(hexdecode(readedMem))
+  print("✅ Successfully!\n\nFile: /sdcard/Decode-eV2ray.txt")
+  
+  gg.clearResults()
+print("Sniff by  @Khay090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(ev2ray))
+prima()
+end
+
+function DarkTunnel()
+  function rwmem(Address, SizeOrBuffer)
+  assert(Address ~= nil, "[rwmem]: error, endereço fornecido é nulo.")
+  
+  _rw = {}
+
+  if type(SizeOrBuffer) == "number" then
+    _ = ""
+    for SRD1_5_ = 1, SizeOrBuffer do
+      _rw[SRD1_5_] = {
+        address = Address - 1 + SRD1_5_,
+        flags = gg.TYPE_BYTE
+      }
+    end
+
+    for SRD1_5_, SRD1_6_ in ipairs(gg.getValues(_rw)) do
+      if SRD1_6_.value == 0 and limit == true then
+        return _
+      end
+      _ = _ .. string.format("%02X", SRD1_6_.value & 255)
+    end
+
+    return _
+  end
+
+  Byte = {}
+  SizeOrBuffer:gsub("..", function(x)
+    Byte[#Byte + 1] = x
+    _rw[#Byte] = {
+      address = Address - 1 + #Byte,
+      flags = gg.TYPE_BYTE,
+      value = x .. "h"
+    }
+  end)
+
+  gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+  return (hex:gsub("%x%x", function(digits)
+    return string.char(tonumber(digits, 16))
+  end))
+end
+
+function hexencode(str)
+  return (str:gsub(".", function(char)
+    return string.format("%2x", char:byte())
+  end))
+end
+
+function Dec2Hex(nValue)
+  nHexVal = string.format("%X", nValue)
+  sHexVal = nHexVal .. ""
+  return sHexVal
+end
+
+function ToInteger(number)
+  return math.floor(tonumber(number) or error("Não foi possível transmitir '" .. tostring(number) .. "' enumerar.'"))
+end
+
+function save(data)
+  io.open("/sdcard/🔓the_clay.json", "w"):write(data)
+end
+
+limit = true
+gg.clearResults()
+gg.setVisible(true)
+gg.setRanges(gg.REGION_JAVA_HEAP | gg.REGION_C_ALLOC | gg.REGION_ANONYMOUS | gg.REGION_JAVA | gg.REGION_C_HEAP | gg.REGION_C_DATA)
+
+local function searchAndSave(searchText)
+  gg.searchNumber(searchText, gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+  local result = gg.getResults(1)
+
+  if #result > 0 then
+    if limit == false then
+      --result[1].address = result[1].address - 3000
+      result[1].address = result[1].address - 8192
+    end
+    --readedMem = rwmem(result[1].address, 4000)
+    readedMem = rwmem(result[1].address, 10000)
+    save(hexdecode(readedMem))
+    return true
+  end
+
+  return false
+end
+
+local tests = {
+  'h 7B 22 69 6E 62 6F 75 6E 64 73 22 3A 5B 7B 22 6C 69 73 74 65 6E 22 3A 22 31 32 37 2E 30 2E 30 2E 31 22 2C',
+  --'h 3A 22 70 61 79 6C 6F 61 64 22 3A',
+  'h 7B 22 69 6E 62 6F 75 6E 64 73 22 3A 5B 7B 22 6C 69 73 74 65 6E 22 3A 22 31 32 37 2E 30 2E 30 2E 31 22 2C',
+  'h 7B 22 69 6E 62 6F 75 6E 64 73 22 3A 5B 7B 22 6C 69 73 74 65 6E 22 3A 22 31 32 37 2E 30 2E 30 2E 31 22',
+  'h 3a 56 65 72 73 69 6f 6e 43 6f 64 65',
+}
+
+local addressFound = false
+
+for i, searchText in ipairs(tests) do
+  if searchAndSave(searchText) then
+    addressFound = true
+    break
+  end
+end
+
+if not addressFound then
+  gg.alert("Decryption failed. Re-import the file and run the script.")
+  
+  
+  os.exit()
+end
+
+local f = io.open("/sdcard/🔓the_clay.json", "r")
+local dark = f:read("*all")
+f:close()
+
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value')
+dark = string.gsub(dark, 'text', 'value') ---strings gsubs to modify keys, add key to text and place text conversation in value
+
+dark = string.gsub(dark, "^%s*(.-)%s*$", "%1")
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(dark)
+f:close()
+
+targetInfo = gg.getTargetInfo()
+app = targetInfo.packageName
+local label = gg.getTargetInfo().label or "N/A"
+
+local currentDate = os.date("*t")
+local data = os.date("%d/%m/%Y")
+
+local message = "AppName: " .. label .. "\nPackage: " .. app .. "\n\n`" .. dark .. "`\n\nCurrent date: " .. data .. "\nChannel: t.me/Gretongers_Premium"
+
+gg.alert(message, 'Copy and exit')
+gg.copyText(message, false)
+
+local f = io.open("/sdcard/🔓the_clay.json", "w")
+f:write(message)
+f:close()
+gg.setVisible(false)
+
+gg.clearResults()
+print("sniff by  @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(dark))
+prima()
+end
+
+function TLSTunnel()
+limit = false
+function rwmem(Address, SizeOrBuffer)
+	assert(Address ~= nil, "[rwmem]: error, provided address is nil.")
+	_rw = {}
+	if type(SizeOrBuffer) == "number" then
+		_ = ""
+		for _ = 1, SizeOrBuffer do _rw[_] = {address = (Address - 1) + _, flags = gg.TYPE_BYTE} end
+		for v, __ in ipairs(gg.getValues(_rw)) do
+		  if __.value == 00 and limit == true then
+		    return _
+		  end
+		  _ = _ .. string.format("%02X", __.value & 0xFF)
+		  -- payload = payload .. string.char(__.value)
+        end
+		return _
+	end
+	Byte = {} SizeOrBuffer:gsub("..", function(x) 
+		Byte[#Byte + 1] = x _rw[#Byte] = {address = (Address - 1) + #Byte, flags = gg.TYPE_BYTE, value = x .. "h"} 
+	end)
+	gg.setValues(_rw)
+end
+
+function hexdecode(hex)
+   return (hex:gsub("%x%x", function(digits) return string.char(tonumber(digits, 16)) end))
+end
+
+function hexencode(str)
+   return (str:gsub(".", function(char) return string.format("%2x", char:byte()) end))
+end
+
+function Dec2Hex(nValue)
+	nHexVal = string.format("%X", nValue);
+	sHexVal = nHexVal.."";
+	return sHexVal;
+end
+
+function ToInteger(number)
+    return math.floor(tonumber(number) or error("Could not cast '" .. tostring(number) .. "' to number.'"))
+end
+
+function save(data)
+    io.open(gg.EXT_STORAGE .. "/🔓the_clay.json", "w"):write(hexdecode(data))
+    gg.toast("BLACKHAT LUA")
+    end
+--':@       302fe48d31a80b905c19af9d4edfe9c3',
+--["eyJBd
+
+  gg.setVisible(false)
+  gg.setRanges(gg.REGION_JAVA_HEAP)
+  gg.searchNumber('::true:::', gg.TYPE_WORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+  --gg.searchNumber(':       splitConfig      ', gg.TYPE_BYTE, false gg.SIGN_EQUAL, 0, -1, 0)
+  local r = gg.getResults(1)
+  if #r < 1 then
+    gg.toast("[x] Failed to Get Value, Tried Another Value")
+    hc_method2 = true
+  end
+  
+  if hc_method2 then
+      gg.searchNumber('::false:::', gg.TYPE_BYTE, false, gg.SIGN_EQUAL, 0, -1, 0)
+      local r = gg.getResults(1)
+      if #r < 1 then
+          gg.toast("✘ 𝐌𝐞𝐭𝐡𝐨𝐝 𝟐 𝐅𝐚𝐢𝐥𝐞𝐝")
+          hc_method3 = true
+          end
+  end
+
+  if hc_method3 then
+    print("✖ 𝐌𝐞𝐭𝐡𝐨𝐝 𝐅𝐚𝐢𝐥𝐞𝐝")
+    os.exit()
+  end
+  local r = gg.getResults(100)
+    if limit == false then
+        r[1].address = r[1].address - 2000
+        end
+    
+    readedMem = rwmem(r[1].address, 20000)
+    save(readedMem)  
+    gg.clearResults()
+ 
+ local f = io.open("/sdcard/🔓the_clay.json", "r")
+ local content = f:read("*all")
+ f:close()
+
+ content = string.gsub(content, '[^\x00\x20-\x7E]', '\n')
+ content = string.gsub(content, ' ', "")
+ content = string.gsub(content, '.*%d%d%d:', '0:')
+ content = string.gsub(content, ':::::::::.*', '')
+ content = string.gsub(content, ':', '\n:')
+ content = string.gsub(content, ':', ':\n')
+ content = string.gsub(content, '\n\n', 'false\n')
+ content = string.gsub(content, ':', '')
+ content = string.gsub(content, '\n+', '\n')
+ 
+ local f = io.open("/sdcard/📹clay.json", "w")
+ f:write(content)
+ f:close()
+
+function base64decode(input)
+    local b64chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+    local b64inv = {}  -- reverse table for decoding
+
+    for i = 1, 64 do
+        b64inv[string.sub(b64chars, i, i)] = i
+    end
+
+    input = string.gsub(input, '[^'..b64chars..'=]', '')
+
+    return (input:gsub('.', function(x)
+        if x == '=' then return '' end
+        local r, f='', (b64inv[x]-1)
+        for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end
+        return r;
+    end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x)
+        if (#x ~= 8) then return '' end
+        local c=0
+        for i=1,8 do c=c+(string.sub(x, i, i)=='1' and 2^(8-i) or 0) end
+        return string.char(c)
+    end))
+end
+
+local file_path = "/sdcard/claytls.txt"
+local input_file = io.open(file_path, "r")
+local output_file = io.open("/sdcard/result.txt", "w")
+local lines = {}
+
+function shouldDecrypt(decoded_text)
+    return decoded_text ~= "true" and decoded_text ~= "false" and decoded_text ~= "Zxx"-- and decoded_text ~= "0"
+end
+
+local lines = {}
+
+for line in input_file:lines() do
+    local decoded_text = shouldDecrypt(line) and base64decode(line) or line
+    decoded_text = string.gsub(decoded_text, "\n", "\\n")  -- Replace newline with "\n"
+    table.insert(lines, decoded_text)
+end
+
+
+input_file:close()
+
+for _, line in ipairs(lines) do
+    output_file:write(line, "\n")
+end
+
+
+
+output_file:close()
+
+local file = io.open("/sdcard/result.txt", "r")
+
+local username, password, payload
+
+for i = 1, 50 do
+    local line = file:read()
+
+    if i == 5 then
+        username = line
+    elseif i == 6 then
+        password = line
+    elseif i == 7 then
+        ssh_host = line
+    elseif i == 8 then
+        server_port = line
+    elseif i == 13 then
+        payload = line
+    elseif i == 15 then
+        sni = line
+    elseif i == 17 then
+        payload_after_tls = line
+    elseif i == 19 then
+        proxy = line
+    elseif i == 20 then
+        proxy_port = line
+    elseif i == 22 then
+        dns = line
+    elseif i == 23 then
+        dns_port = line
+    elseif i == 24 then
+        nameserver = line
+    elseif i == 25 then
+        pubkey = line
+    elseif i == 28 then
+        notes = line
+    end
+end
+
+file:close()
+
+local output_file = io.open("/sdcard/Tls.txt", "w")
+
+output_file:write("┌───────────────\n│𝐓𝐋𝐒 𝐓𝐔𝐍𝐍𝐄𝐋 (𝐓𝐋𝐒)\n│𝐆𝐫𝐨𝐮𝐩: https://t.me/Gretongers_Premium/@Khay_090\n├───────────────\n")
+output_file:write(" username : ", username, "\n")
+output_file:write(" password : ", password, "\n")
+output_file:write(" host : ", ssh_host, "\n")
+output_file:write(" server_port : ", server_port, "\n")
+output_file:write(" payload : ", payload, "\n")
+output_file:write(" ssl_sni : ", sni, "\n")
+output_file:write(" after_tls : ", payload_after_tls, "\n")
+output_file:write(" proxy : ", proxy, "\n")
+output_file:write(" proxy_port : ", proxy_port, "\n")
+output_file:write(" dns : ", dns, "\n")
+output_file:write(" dns_port : ", dns_port, "\n")
+output_file:write(" name_server : ", nameserver, "\n")
+output_file:write(" public_key : ", pubkey, "\n")
+output_file:write(" notes : ", notes, "\n")
+output_file:write("└───────────────")
+
+output_file:close()
+
+local file = io.open("/sdcard/Tls.txt", "r")
+
+if file then
+
+    local isi_file = file:read("*all")
+
+    gg.alert(isi_file)
+    gg.copyText(isi_file, false)
+
+    file:close()
+
+gg.clearResults()
+print("𝐂𝐫𝐞𝐝𝐢𝐭𝐨𝐬 𝐝𝐞 𝐥𝐮𝐚  @Khay_090 ")
+print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ __________$$$$$$$$$$$$$$$$$$$$
+]])
+os.exit()
+pcall(load(HttpInjectorX9))
+prima()
+end
+end
+
+function EXIT()
+    gg.copyText("https://t.me/Snifhc @Khay_090")
+gg.alert("ƬΉΣ ᄃᄂΛY")
+if gg.getResultCount() == 2 then 
+    gg.copyText("O script cerrado")
+end
+    gg.setVisible(false)
+    print("\n")
+    print("sniff by  @Khay_090 ")
+	print([[________________$$$$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ ______________$$____$$
+ __________$$$$$$____$$$$$$
+ ________$$____$$____$$____$$$$
+ ________$$____$$____$$____$$__$$
+ $$$$$$__$$____$$____$$____$$____$$
+ $$____$$$$________________$$____$$
+ $$______$$______________________$$
+ __$$____$$______________________$$
+ ___$$$__$$______________________$$
+ ____$$__________________________$$
+ _____$$$________________________$$
+ ______$$______________________$$$
+ _______$$$____________________$$
+ ________$$____________________$$
+ _________$$$________________$$$
+ __________$$________________$$
+ ________$$$$$$$$$$$$$$$$$$$$
+]])
+    os.exit()
+end
+
+function x9P()
+gg.toast("Tente De Novo")
+end
+function prima()
+end
+if x9A == 1 then x9B() end
+end
+end
+if x9ok == 1 then x9on() end
